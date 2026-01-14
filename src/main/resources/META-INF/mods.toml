@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="fionamillenaire"
+version="1.0.1"
+displayName="Fiona's Millenaire Additions"
+description="Fiona's Block and Item addons for Millenaire Cultures"
+authors="FionaDanger"
