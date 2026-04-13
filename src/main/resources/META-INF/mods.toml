@@ -11,7 +11,7 @@ description='''
 A NeoForge mod adding Millénaire-inspired cultures, blocks, and worldbuilding content.
 '''
 
-entrypoint="com.fionadanger.fionamillenaire.fionamillenaire"
+entrypoint="com.fionadanger.fionamillenaire.FionaMillenaireMod"
 
 [[dependencies.fionamillenaire]]
 modId="neoforge"

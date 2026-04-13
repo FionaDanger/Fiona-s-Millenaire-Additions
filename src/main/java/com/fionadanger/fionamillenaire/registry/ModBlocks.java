@@ -1,6 +1,6 @@
 package com.fionadanger.fionamillenaire.registry;
 
-import com.fionadanger.fionamillenaire.fionamillenaire;
+import com.fionadanger.fionamillenaire.FionaMillenaireMod;
 import com.fionadanger.fionamillenaire.block.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(Registries.BLOCK, fionamillenaire.MODID);
+            DeferredRegister.create(Registries.BLOCK, FionaMillenaireMod.MODID);
 
     // ------------------------------------------------------------
     // Wicker + Stickwall (like planks)
