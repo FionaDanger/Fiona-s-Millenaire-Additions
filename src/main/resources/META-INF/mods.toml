@@ -1,10 +1,28 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[4,)"
 license="MIT"
 
 [[mods]]
 modId="fionamillenaire"
-version="1.0.1"
-displayName="Fiona's Millenaire Additions"
-description="Fiona's Block and Item addons for Millenaire Cultures"
-authors="FionaDanger"
+version="1.0.0"
+displayName="FionaMillenaire"
+authors="Fiona Danger"
+description='''
+A NeoForge mod adding Millénaire-inspired cultures, blocks, and worldbuilding content.
+'''
+
+entrypoint="com.fionadanger.FionaMillenaire.FionaMillenaire"
+
+[[dependencies.fionamillenaire]]
+modId="neoforge"
+mandatory=true
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.fionamillenaire]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.1,)"
+ordering="NONE"
+side="BOTH"
