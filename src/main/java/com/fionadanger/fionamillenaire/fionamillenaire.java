@@ -1,4 +1,4 @@
-package com.fionadanger.FionaMillenaire;
+package com.fionadanger.fionamillenaire;
 
 import net.neoforged.fml.common.Mod;
 
