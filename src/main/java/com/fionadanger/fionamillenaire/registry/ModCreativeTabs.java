@@ -1,6 +1,6 @@
 package com.fionadanger.fionamillenaire.registry;
 
-import com.fionadanger.fionamillenaire.fionamillenaire;
+import com.fionadanger.fionamillenaire.FionaMillenaire;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 public class ModCreativeTabs {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, fionamillenaire.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FionaMillenaire.MODID);
 
     public static final Supplier<CreativeModeTab> TAB_FIONA =
             CREATIVE_TABS.register("fionamillenaire",

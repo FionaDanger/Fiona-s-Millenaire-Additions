@@ -1,7 +1,6 @@
 package com.fionadanger.fionamillenaire.registry;
 
-import com.fionadanger.fionamillenaire.fionamillenaire;
-import com.fionadanger.fionamillenaire.block.*;
+import com.fionadanger.fionamillenaire.FionaMillenaire;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -14,7 +13,7 @@ import java.util.function.Supplier;
 public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(Registries.ITEM, fionamillenaire.MODID);
+            DeferredRegister.create(Registries.ITEM, FionaMillenaire.MODID);
 
     public static final Set<Supplier<Item>> CREATIVE_TAB_ITEMS = new LinkedHashSet<>();
 

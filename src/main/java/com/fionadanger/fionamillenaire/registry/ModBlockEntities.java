@@ -1,18 +1,19 @@
 package com.fionadanger.fionamillenaire.registry;
 
-import com.fionadanger.fionamillenaire.*;
+import com.fionadanger.fionamillenaire.FionaMillenaire;
 import com.fionadanger.fionamillenaire.block.entity.HideBedrollBlockEntity;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.minecraft.core.registries.Registries;
-import net.neoforged.neoforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 public class ModBlockEntities {
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-            DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, fionamillenaire.MODID);
+            DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, FionaMillenaire.MODID);
 
-    public static final RegistryObject<BlockEntityType<HideBedrollBlockEntity>> HIDE_BEDROLL =
+    public static final Supplier<BlockEntityType<HideBedrollBlockEntity>> HIDE_BEDROLL =
             BLOCK_ENTITIES.register("hide_bedroll",
                     () -> BlockEntityType.Builder.of(
                             HideBedrollBlockEntity::new,

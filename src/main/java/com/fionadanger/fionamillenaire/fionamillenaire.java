@@ -2,11 +2,11 @@ package com.fionadanger.fionamillenaire;
 
 import net.neoforged.fml.common.Mod;
 
-@Mod(fionamillenaire.MODID)
-public class fionamillenaire {
+@Mod(FionaMillenaire.MODID)
+public class FionaMillenaire {
 
     public static final String MODID = "fionamillenaire";
 
-    public fionamillenaire() {
+    public FionaMillenaire() {
     }
 }
