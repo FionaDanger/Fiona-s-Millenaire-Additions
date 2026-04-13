@@ -7,7 +7,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class ShinglesStairs extends StairBlock {
-    public ShinglesStairs() {
+    public ShinglesStairs(Properties properties) {
         super(() -> ModBlocks.SHINGLESBLOCK.get().defaultBlockState(),
                 Properties.of()
                         .mapColor(MapColor.COLOR_GRAY)

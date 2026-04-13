@@ -6,7 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class PalmThatchSlab extends SlabBlock {
-    public PalmThatchSlab() {
+    public PalmThatchSlab(Properties properties) {
         super(Properties.of()
                 .mapColor(MapColor.COLOR_YELLOW)
                 .strength(0.6F)

@@ -6,7 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 
 public class StickwallBlock extends Block {
 
-    public StickwallBlock() {
+    public StickwallBlock(Properties properties) {
         super(Properties.of()
                 .mapColor(MapColor.WOOD)          // same map color as oak planks
                 .strength(2.0f, 3.0f)             // hardness 2.0, blast resistance 3.0

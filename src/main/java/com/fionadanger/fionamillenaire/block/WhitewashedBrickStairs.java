@@ -7,7 +7,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class WhitewashedBrickStairs extends StairBlock {
-    public WhitewashedBrickStairs() {
+    public WhitewashedBrickStairs(Properties properties) {
         super(() -> ModBlocks.WHITEWASHEDBRICKS.get().defaultBlockState(),
                 Properties.of()
                         .mapColor(MapColor.COLOR_LIGHT_GRAY)

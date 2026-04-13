@@ -2,96 +2,134 @@ package com.fionadanger.fionamillenaire.registry;
 
 import com.fionadanger.fionamillenaire.fionamillenaire;
 import com.fionadanger.fionamillenaire.block.*;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
 
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, fionamillenaire.MODID);
+            DeferredRegister.create(Registries.BLOCK, fionamillenaire.MODID);
 
-    // Wicker + Stickwall
-    public static final RegistryObject<Block> WICKER =
-            BLOCKS.register("wicker", () -> new WickerBlock());
+    // ------------------------------------------------------------
+    // Wicker + Stickwall (like planks)
+    // ------------------------------------------------------------
 
-    public static final RegistryObject<Block> STICKWALLBLOCK =
-            BLOCKS.register("stickwall", () -> new StickwallBlock());
+    public static final Supplier<Block> WICKER = BLOCKS.register("wicker",
+            () -> new WickerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
-    // PALM THATCH
-    public static final RegistryObject<Block> PALMTHATCHBLOCK =
-            BLOCKS.register("palmthatchblock", () -> new PalmThatchBlock());
+    public static final Supplier<Block> STICKWALLBLOCK = BLOCKS.register("stickwall",
+            () -> new StickwallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
-    public static final RegistryObject<Block> PALMTHATCHSLAB =
-            BLOCKS.register("palmthatchslab", () -> new PalmThatchSlab());
+    // ------------------------------------------------------------
+    // Palm Thatch (like bamboo planks but weaker)
+    // ------------------------------------------------------------
 
-    public static final RegistryObject<Block> PALMTHATCHSTAIRS =
-            BLOCKS.register("palmthatchstairs", () -> new PalmThatchStairs());
+    public static final Supplier<Block> PALMTHATCHBLOCK = BLOCKS.register("palmthatchblock",
+            () -> new PalmThatchBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .strength(0.6F) // weaker than bamboo planks
+                    .sound(SoundType.BAMBOO_WOOD)
+                    .ignitedByLava()));
 
-    // CARIBOU HIDE
-    public static final RegistryObject<Block> CARIBOUHIDEBLOCK =
-            BLOCKS.register("caribouhideblock", () -> new CaribouHideBlock());
+    public static final Supplier<Block> PALMTHATCHSLAB = BLOCKS.register("palmthatchslab",
+            () -> new PalmThatchSlab(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .strength(0.6F)
+                    .sound(SoundType.BAMBOO_WOOD)
+                    .ignitedByLava()));
 
-    public static final RegistryObject<Block> CARIBOUHIDESLAB =
-            BLOCKS.register("caribouhideslab", () -> new CaribouHideSlab());
+    public static final Supplier<Block> PALMTHATCHSTAIRS = BLOCKS.register("palmthatchstairs",
+            () -> new PalmThatchStairs(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .strength(0.6F)
+                    .sound(SoundType.BAMBOO_WOOD)
+                    .ignitedByLava()));
 
-    public static final RegistryObject<Block> CARIBOUHIDESTAIRS =
-            BLOCKS.register("caribouhidestairs", () -> new CaribouHideStairs());
+    // ------------------------------------------------------------
+    // Caribou Hide (like wool)
+    // ------------------------------------------------------------
 
-    // SEALSKIN
-    public static final RegistryObject<Block> SEALSKINBLOCK =
-            BLOCKS.register("sealskinblock", () -> new SealskinBlock());
+    public static final Supplier<Block> CARIBOUHIDEBLOCK = BLOCKS.register("caribouhideblock",
+            () -> new CaribouHideBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    public static final RegistryObject<Block> SEALSKINSLAB =
-            BLOCKS.register("sealskinslab", () -> new SealskinSlab());
+    public static final Supplier<Block> CARIBOUHIDESLAB = BLOCKS.register("caribouhideslab",
+            () -> new CaribouHideSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    public static final RegistryObject<Block> SEALSKINSTAIRS =
-            BLOCKS.register("sealskinstairs", () -> new SealskinStairs());
+    public static final Supplier<Block> CARIBOUHIDESTAIRS = BLOCKS.register("caribouhidestairs",
+            () -> new CaribouHideStairs(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    // WHITEWASHED BRICKS
-    public static final RegistryObject<Block> WHITEWASHEDBRICKS =
-            BLOCKS.register("whitewashedbricks", () -> new WhitewashedBricks());
+    // ------------------------------------------------------------
+    // Sealskin (like wool)
+    // ------------------------------------------------------------
 
-    public static final RegistryObject<Block> WHITEWASHEDBRICKSLAB =
-            BLOCKS.register("whitewashedbrickslab", () -> new WhitewashedBrickSlab());
+    public static final Supplier<Block> SEALSKINBLOCK = BLOCKS.register("sealskinblock",
+            () -> new SealskinBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    public static final RegistryObject<Block> WHITEWASHEDBRICKSTAIRS =
-            BLOCKS.register("whitewashedbrickstairs", () -> new WhitewashedBrickStairs());
+    public static final Supplier<Block> SEALSKINSLAB = BLOCKS.register("sealskinslab",
+            () -> new SealskinSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    // SHINGLES
-    public static final RegistryObject<Block> SHINGLESBLOCK =
-            BLOCKS.register("shinglesblock", () -> new ShinglesBlock());
+    public static final Supplier<Block> SEALSKINSTAIRS = BLOCKS.register("sealskinstairs",
+            () -> new SealskinStairs(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    public static final RegistryObject<Block> SHINGLESSLAB =
-            BLOCKS.register("shinglesslab", () -> new ShinglesSlab());
+    // ------------------------------------------------------------
+    // Whitewashed Bricks (like bricks)
+    // ------------------------------------------------------------
 
-    public static final RegistryObject<Block> SHINGLESSTAIRS =
-            BLOCKS.register("shinglesstairs", () -> new ShinglesStairs());
+    public static final Supplier<Block> WHITEWASHEDBRICKS = BLOCKS.register("whitewashedbricks",
+            () -> new WhitewashedBricks(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
 
-    // TAN STUCCO BRICKS
-    public static final RegistryObject<Block> TANSTUCCOBRICKS =
-            BLOCKS.register("tanstuccobricks", () -> new TanStuccoBricks());
+    public static final Supplier<Block> WHITEWASHEDBRICKSLAB = BLOCKS.register("whitewashedbrickslab",
+            () -> new WhitewashedBrickSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_SLAB)));
 
-    public static final RegistryObject<Block> TANSTUCCOBRICKSLAB =
-            BLOCKS.register("tanstuccobrickslab", () -> new TanStuccoBrickSlab());
+    public static final Supplier<Block> WHITEWASHEDBRICKSTAIRS = BLOCKS.register("whitewashedbrickstairs",
+            () -> new WhitewashedBrickStairs(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_STAIRS)));
 
-    public static final RegistryObject<Block> TANSTUCCOBRICKSTAIRS =
-            BLOCKS.register("tanstuccobrickstairs", () -> new TanStuccoBrickStairs());
+    // ------------------------------------------------------------
+    // Shingles (like bricks)
+    // ------------------------------------------------------------
 
-    // ORNATE CUMAN BRICK
-    public static final RegistryObject<Block> ORNATECUMANBRICK =
-            BLOCKS.register("ornatecumanbrick", () -> new OrnateCumanBrick());
+    public static final Supplier<Block> SHINGLESBLOCK = BLOCKS.register("shinglesblock",
+            () -> new ShinglesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
 
-    // HIDE BEDROLL
-    public static final RegistryObject<Block> HIDE_BEDROLL =
-            BLOCKS.register("hide_bedroll",
-                    () -> new HideBedrollBlock(BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.COLOR_BROWN)
-                            .strength(0.2F)
-                            .noOcclusion()
-                            .ignitedByLava()
-                    ));
+    public static final Supplier<Block> SHINGLESSLAB = BLOCKS.register("shinglesslab",
+            () -> new ShinglesSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_SLAB)));
+
+    public static final Supplier<Block> SHINGLESSTAIRS = BLOCKS.register("shinglesstairs",
+            () -> new ShinglesStairs(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_STAIRS)));
+
+    // ------------------------------------------------------------
+    // Tan Stucco Bricks (like bricks)
+    // ------------------------------------------------------------
+
+    public static final Supplier<Block> TANSTUCCOBRICKS = BLOCKS.register("tanstuccobricks",
+            () -> new TanStuccoBricks(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+
+    public static final Supplier<Block> TANSTUCCOBRICKSLAB = BLOCKS.register("tanstuccobrickslab",
+            () -> new TanStuccoBrickSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_SLAB)));
+
+    public static final Supplier<Block> TANSTUCCOBRICKSTAIRS = BLOCKS.register("tanstuccobrickstairs",
+            () -> new TanStuccoBrickStairs(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_STAIRS)));
+
+    // ------------------------------------------------------------
+    // Ornate Cuman Brick (like bricks)
+    // ------------------------------------------------------------
+
+    public static final Supplier<Block> ORNATECUMANBRICK = BLOCKS.register("ornatecumanbrick",
+            () -> new OrnateCumanBrick(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+
+    // ------------------------------------------------------------
+    // Hide Bedroll (like wool)
+    // ------------------------------------------------------------
+
+    public static final Supplier<Block> HIDE_BEDROLL = BLOCKS.register("hide_bedroll",
+            () -> new HideBedrollBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)
+                    .noOcclusion()
+                    .strength(0.2F)));
 }

@@ -6,7 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class PalmThatchBlock extends Block {
-    public PalmThatchBlock() {
+    public PalmThatchBlock(Properties properties) {
         super(Properties.of()
                 .mapColor(MapColor.COLOR_YELLOW)   // bamboo plank color
                 .strength(0.6F)                    // slightly easier to break

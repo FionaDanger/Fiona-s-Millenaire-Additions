@@ -7,7 +7,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class TanStuccoBrickStairs extends StairBlock {
-    public TanStuccoBrickStairs() {
+    public TanStuccoBrickStairs(Properties properties) {
         super(() -> ModBlocks.TANSTUCCOBRICKS.get().defaultBlockState(),
                 Properties.of()
                         .mapColor(MapColor.SAND)

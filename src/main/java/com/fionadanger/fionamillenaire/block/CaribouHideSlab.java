@@ -6,7 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class CaribouHideSlab extends SlabBlock {
-    public CaribouHideSlab() {
+    public CaribouHideSlab(Properties properties) {
         super(Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.8F)

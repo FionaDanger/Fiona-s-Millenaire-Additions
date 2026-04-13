@@ -6,7 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class TanStuccoBricks extends Block {
-    public TanStuccoBricks() {
+    public TanStuccoBricks(Properties properties) {
         super(Properties.of()
                 .mapColor(MapColor.SAND)
                 .strength(2.0F, 6.0F)

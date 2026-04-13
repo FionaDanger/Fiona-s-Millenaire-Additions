@@ -6,7 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class OrnateCumanBrick extends Block {
-    public OrnateCumanBrick() {
+    public OrnateCumanBrick(Properties properties) {
         super(Properties.of()
                 .mapColor(MapColor.SAND)
                 .strength(2.0F, 6.0F)

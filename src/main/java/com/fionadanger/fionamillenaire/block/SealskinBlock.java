@@ -6,7 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class SealskinBlock extends Block {
-    public SealskinBlock() {
+    public SealskinBlock(Properties properties) {
         super(Properties.of()
                 .mapColor(MapColor.COLOR_LIGHT_BLUE)
                 .strength(0.8F)

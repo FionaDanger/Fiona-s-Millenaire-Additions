@@ -7,7 +7,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class PalmThatchStairs extends StairBlock {
-    public PalmThatchStairs() {
+    public PalmThatchStairs(Properties properties) {
         super(() -> ModBlocks.PALMTHATCHBLOCK.get().defaultBlockState(),
                 Properties.of()
                         .mapColor(MapColor.COLOR_YELLOW)

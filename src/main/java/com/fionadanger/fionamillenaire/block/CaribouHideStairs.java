@@ -7,7 +7,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class CaribouHideStairs extends StairBlock {
-    public CaribouHideStairs() {
+    public CaribouHideStairs(Properties properties) {
         super(() -> ModBlocks.CARIBOUHIDEBLOCK.get().defaultBlockState(),
                 Properties.of()
                         .mapColor(MapColor.COLOR_BROWN)

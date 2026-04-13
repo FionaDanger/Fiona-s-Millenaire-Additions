@@ -7,7 +7,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class SealskinStairs extends StairBlock {
-    public SealskinStairs() {
+    public SealskinStairs(Properties properties) {
         super(() -> ModBlocks.SEALSKINBLOCK.get().defaultBlockState(),
                 Properties.of()
                         .mapColor(MapColor.COLOR_LIGHT_BLUE)
