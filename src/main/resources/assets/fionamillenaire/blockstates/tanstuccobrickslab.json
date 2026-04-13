@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "fionamillenaire:block/tanstuccobrickslab" },
+    "type=top":    { "model": "fionamillenaire:block/tanstuccobrickslab_top" },
+    "type=double": { "model": "fionamillenaire:block/tanstuccobrick" }
+  }
+}

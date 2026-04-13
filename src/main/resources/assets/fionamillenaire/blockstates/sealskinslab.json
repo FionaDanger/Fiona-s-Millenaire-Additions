@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "type=bottom": { "model": "fionamillenaire:block/sealskinslab" },
+    "type=top":    { "model": "fionamillenaire:block/sealskinslab_top" },
+    "type=double": { "model": "fionamillenaire:block/sealskin" }
+  }

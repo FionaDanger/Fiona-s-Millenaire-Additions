@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "fionamillenaire:block/shingles",
+    "top": "fionamillenaire:block/shingles",
+    "side": "fionamillenaire:block/shingles"
+  }
+}

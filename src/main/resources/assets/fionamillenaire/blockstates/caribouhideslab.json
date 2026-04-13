@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "fionamillenaire:block/caribouhide_slab" },
+    "type=top":    { "model": "fionamillenaire:block/caribouhide_slab_top" },
+    "type=double": { "model": "fionamillenaire:block/caribouhide" }
+  }
+}

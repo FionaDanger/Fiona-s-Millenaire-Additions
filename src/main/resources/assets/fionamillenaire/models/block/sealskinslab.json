@@ -1,0 +1,9 @@
+
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "fionamillenaire:block/sealskin",
+    "top": "fionamillenaire:block/sealskin",
+    "side": "fionamillenaire:block/sealskin"
+  }
+}

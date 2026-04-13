@@ -1,0 +1,8 @@
+
+{
+  "variants": {
+    "type=bottom": { "model": "fionamillenaire:block/shinglesslab" },
+    "type=top":    { "model": "fionamillenaire:block/shinglesslab_top" },
+    "type=double": { "model": "fionamillenaire:block/shingles" }
+  }
+}

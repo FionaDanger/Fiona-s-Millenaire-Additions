@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "fionamillenaire:block/palmthatch",
+    "top": "fionamillenaire:block/palmthatch",
+    "side": "fionamillenaire:block/palmthatch"
+  }
+}

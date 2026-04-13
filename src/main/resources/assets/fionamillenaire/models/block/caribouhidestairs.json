@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "fionamillenaire:block/caribouhide",
+    "top": "fionamillenaire:block/caribouhide",
+    "side": "fionamillenaire:block/caribouhide"
+  }
+}

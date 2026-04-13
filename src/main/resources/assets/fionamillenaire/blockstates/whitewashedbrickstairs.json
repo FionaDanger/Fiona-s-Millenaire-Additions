@@ -1,0 +1,53 @@
+{
+  "variants": {
+    "facing=north,half=bottom,shape=straight": { "model": "fionamillenaire:block/whitewashedbrickstairs" },
+    "facing=east,half=bottom,shape=straight":  { "model": "fionamillenaire:block/whitewashedbrickstairs", "y": 90 },
+    "facing=south,half=bottom,shape=straight": { "model": "fionamillenaire:block/whitewashedbrickstairs", "y": 180 },
+    "facing=west,half=bottom,shape=straight":  { "model": "fionamillenaire:block/whitewashedbrickstairs", "y": 270 },
+
+    "facing=north,half=bottom,shape=inner_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner" },
+    "facing=east,half=bottom,shape=inner_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "y": 90 },
+    "facing=south,half=bottom,shape=inner_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "y": 180 },
+    "facing=west,half=bottom,shape=inner_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "y": 270 },
+
+    "facing=north,half=bottom,shape=inner_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "y": 90 },
+    "facing=east,half=bottom,shape=inner_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "y": 180 },
+    "facing=south,half=bottom,shape=inner_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "y": 270 },
+    "facing=west,half=bottom,shape=inner_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner" },
+
+    "facing=north,half=bottom,shape=outer_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer" },
+    "facing=east,half=bottom,shape=outer_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "y": 90 },
+    "facing=south,half=bottom,shape=outer_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "y": 180 },
+    "facing=west,half=bottom,shape=outer_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "y": 270 },
+
+    "facing=north,half=bottom,shape=outer_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "y": 90 },
+    "facing=east,half=bottom,shape=outer_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "y": 180 },
+    "facing=south,half=bottom,shape=outer_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "y": 270 },
+    "facing=west,half=bottom,shape=outer_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer" },
+
+    "facing=north,half=top,shape=straight": { "model": "fionamillenaire:block/whitewashedbrickstairs", "x": 180 },
+    "facing=east,half=top,shape=straight":  { "model": "fionamillenaire:block/whitewashedbrickstairs", "x": 180, "y": 90 },
+    "facing=south,half=top,shape=straight": { "model": "fionamillenaire:block/whitewashedbrickstairs", "x": 180, "y": 180 },
+    "facing=west,half=top,shape=straight":  { "model": "fionamillenaire:block/whitewashedbrickstairs", "x": 180, "y": 270 },
+
+    "facing=north,half=top,shape=inner_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180 },
+    "facing=east,half=top,shape=inner_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180, "y": 90 },
+    "facing=south,half=top,shape=inner_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180, "y": 180 },
+    "facing=west,half=top,shape=inner_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180, "y": 270 },
+
+    "facing=north,half=top,shape=inner_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180, "y": 90 },
+    "facing=east,half=top,shape=inner_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180, "y": 180 },
+    "facing=south,half=top,shape=inner_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180, "y": 270 },
+    "facing=west,half=top,shape=inner_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_inner", "x": 180 },
+
+    "facing=north,half=top,shape=outer_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180 },
+    "facing=east,half=top,shape=outer_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180, "y": 90 },
+    "facing=south,half=top,shape=outer_left":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180, "y": 180 },
+    "facing=west,half=top,shape=outer_left":   { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180, "y": 270 },
+
+    "facing=north,half=top,shape=outer_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180, "y": 90 },
+    "facing=east,half=top,shape=outer_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180, "y": 180 },
+    "facing=south,half=top,shape=outer_right": { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180, "y": 270 },
+    "facing=west,half=top,shape=outer_right":  { "model": "fionamillenaire:block/whitewashedbrickstairs_outer", "x": 180 }
+  }
+}

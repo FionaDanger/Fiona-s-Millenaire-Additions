@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "type=bottom": { "model": "fionamillenaire:block/whitewashedbrickslab" },
+    "type=top":    { "model": "fionamillenaire:block/whitewashedbrickslab_top" },
+    "type=double": { "model": "fionamillenaire:block/whitewashedbrick" }
+  }
