@@ -1,7 +1,7 @@
 package com.fionadanger.fionamillenaire.registry;
 
-import com.fionadanger.fionamillenaire.*;
-import com.fionadanger.fionamillenaire.block.entity.HideBedrollBlockEntity;
+import com.fionadanger.fionamillenaire.FionaMillenaireMod;
+import com.fionadanger.fionamillenaire.entity.HideBedrollBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;

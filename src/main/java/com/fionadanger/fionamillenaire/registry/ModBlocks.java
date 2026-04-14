@@ -10,12 +10,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+
 import java.util.function.Supplier;
 
 public class ModBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(Registries.BLOCK, FionaMillenaireMod.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, FionaMillenaireMod.MODID);
 
     // ------------------------------------------------------------
     // Wicker + Stickwall (like planks)
