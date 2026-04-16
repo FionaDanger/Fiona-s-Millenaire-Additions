@@ -3,7 +3,6 @@ package com.fionadanger.fionamillenaire;
 import com.mojang.logging.LogUtils;
 import com.fionadanger.fionamillenaire.block.InitBuildingBlocks;
 import com.fionadanger.fionamillenaire.item.InitBuildingItems;
-import com.fionadanger.fionamillenaire.blockentity.InitBlockEntities;
 import com.fionadanger.fionamillenaire.core.FMConstants;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -24,7 +23,6 @@ public class FionaMillenaireMod
     {
         InitBuildingBlocks.BUILDING_BLOCK_REGISTRY.register(modEventBus);
         InitBuildingItems.BUILDING_ITEM_REGISTRY.register(modEventBus);
-        InitBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
 
     }

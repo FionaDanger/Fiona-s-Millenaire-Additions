@@ -10,4 +10,4 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-
+ClientModEvents.registerBlockEntityRenderer(InitBlockEntities.YURT_BE, YurtBlockEntityRenderer::new);

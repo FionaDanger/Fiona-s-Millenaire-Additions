@@ -1,5 +1,7 @@
 package com.fionadanger.fionamillenaire.block;
 
+import com.fionadanger.fionamillenaire.block.yurt.YurtBlock;
+import com.fionadanger.fionamillenaire.block.yurt.YurtBlockEntity;
 import com.fionadanger.fionamillenaire.core.FMConstants;
 import com.fionadanger.fionamillenaire.block.custom.*;
 import net.minecraft.world.level.block.Block;
@@ -135,4 +137,8 @@ public class InitBuildingBlocks
                     () -> new HideBedrollBlock(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)
                             .noOcclusion()
                             .strength(0.2F)));
+
+    public static final DeferredBlock<YurtBlock> YURT =
+            BUILDING_BLOCK_REGISTRY.register("yurtblock",
+                    () -> new YurtBlock(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 }
