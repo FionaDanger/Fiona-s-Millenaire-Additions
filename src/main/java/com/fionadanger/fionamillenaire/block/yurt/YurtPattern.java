@@ -6,7 +6,7 @@ public enum YurtPattern {
     WATER("water"),
     RAM("ram"),
     ROPE("rope"),
-    AMULET("amulet"); // Add more as needed
+    AMULET("amulet");
 
     public final String id;
     YurtPattern(String id) { this.id = id; }

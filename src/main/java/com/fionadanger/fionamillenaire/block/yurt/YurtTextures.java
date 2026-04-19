@@ -4,7 +4,6 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.HashMap;
 import java.util.Map;
 
-// Centralized texture resolver
 public class YurtTextures {
     private static final Map<String, ResourceLocation> CACHE = new HashMap<>();
 

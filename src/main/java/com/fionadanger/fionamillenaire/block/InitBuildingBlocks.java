@@ -16,7 +16,6 @@ public class InitBuildingBlocks
     public static final DeferredRegister.Blocks BUILDING_BLOCK_REGISTRY =
             DeferredRegister.createBlocks(FMConstants.MODID);
 
-    // Wicker + Stickwall (like planks)
     public static final DeferredBlock<WickerBlock> WICKER =
             BUILDING_BLOCK_REGISTRY.register("wicker",
                     () -> new WickerBlock(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
@@ -25,7 +24,6 @@ public class InitBuildingBlocks
             BUILDING_BLOCK_REGISTRY.register("stickwall",
                     () -> new StickwallBlock(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
-    // Palm Thatch (like bamboo planks but weaker)
     public static final DeferredBlock<PalmThatchBlock> PALMTHATCHBLOCK =
             BUILDING_BLOCK_REGISTRY.register("palmthatchblock",
                     () -> new PalmThatchBlock(Block.Properties.of()
@@ -50,7 +48,6 @@ public class InitBuildingBlocks
                             .sound(SoundType.BAMBOO_WOOD)
                             .ignitedByLava()));
 
-    // Caribou Hide (like wool)
     public static final DeferredBlock<CaribouHideBlock> CARIBOUHIDEBLOCK =
             BUILDING_BLOCK_REGISTRY.register("caribouhideblock",
                     () -> new CaribouHideBlock(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
@@ -63,7 +60,6 @@ public class InitBuildingBlocks
             BUILDING_BLOCK_REGISTRY.register("caribouhidestairs",
                     () -> new CaribouHideStairs(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    // Sealskin (like wool)
     public static final DeferredBlock<SealskinBlock> SEALSKINBLOCK =
             BUILDING_BLOCK_REGISTRY.register("sealskinblock",
                     () -> new SealskinBlock(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
@@ -74,12 +70,8 @@ public class InitBuildingBlocks
 
     public static final DeferredBlock<SealskinStairs> SEALSKINSTAIRS =
             BUILDING_BLOCK_REGISTRY.register("sealskinstairs",
-                    () -> new SealskinStairs(Block.Properties.of()
-                            .strength(0.8F)
-                            .sound(SoundType.WOOL)
-                            .ignitedByLava()));
+                    () -> new SealskinStairs(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
-    // Whitewashed Bricks (like bricks)
     public static final DeferredBlock<WhitewashedBricks> WHITEWASHEDBRICKS =
             BUILDING_BLOCK_REGISTRY.register("whitewashedbricks",
                     () -> new WhitewashedBricks(Block.Properties.ofFullCopy(Blocks.BRICKS)));
@@ -96,7 +88,6 @@ public class InitBuildingBlocks
             BUILDING_BLOCK_REGISTRY.register("whitewashedbrickwall",
                     () -> new WhitewashedBrickWall(Block.Properties.ofFullCopy(Blocks.BRICK_WALL)));
 
-    // Shingles (like bricks)
     public static final DeferredBlock<ShinglesBlock> SHINGLESBLOCK =
             BUILDING_BLOCK_REGISTRY.register("shinglesblock",
                     () -> new ShinglesBlock(Block.Properties.ofFullCopy(Blocks.BRICKS)));
@@ -109,7 +100,6 @@ public class InitBuildingBlocks
             BUILDING_BLOCK_REGISTRY.register("shinglesstairs",
                     () -> new ShinglesStairs(Block.Properties.ofFullCopy(Blocks.BRICK_STAIRS)));
 
-    // Tan Stucco Bricks (like bricks)
     public static final DeferredBlock<TanStuccoBricks> TANSTUCCOBRICKS =
             BUILDING_BLOCK_REGISTRY.register("tanstuccobricks",
                     () -> new TanStuccoBricks(Block.Properties.ofFullCopy(Blocks.BRICKS)));
@@ -126,12 +116,10 @@ public class InitBuildingBlocks
             BUILDING_BLOCK_REGISTRY.register("tanstuccobrickwall",
                     () -> new TanStuccoBrickWall(Block.Properties.ofFullCopy(Blocks.BRICK_WALL)));
 
-    // Ornate Cuman Brick (like bricks)
     public static final DeferredBlock<OrnateCumanBrick> ORNATECUMANBRICK =
             BUILDING_BLOCK_REGISTRY.register("ornatecumanbrick",
                     () -> new OrnateCumanBrick(Block.Properties.ofFullCopy(Blocks.BRICKS)));
 
-    // Hide Bedroll (like wool, no occlusion)
     public static final DeferredBlock<HideBedrollBlock> HIDE_BEDROLL =
             BUILDING_BLOCK_REGISTRY.register("hide_bedroll",
                     () -> new HideBedrollBlock(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)
