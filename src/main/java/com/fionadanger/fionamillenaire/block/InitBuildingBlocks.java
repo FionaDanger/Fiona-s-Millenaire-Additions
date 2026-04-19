@@ -92,7 +92,7 @@ public class InitBuildingBlocks
             BUILDING_BLOCK_REGISTRY.register("whitewashedbrickstairs",
                     () -> new WhitewashedBrickStairs(Block.Properties.ofFullCopy(Blocks.BRICK_STAIRS)));
 
-    public static final DeferredBlock<WhitewashedBrickWall> WHITEWASHED_BRICK_WALL =
+    public static final DeferredBlock<WhitewashedBrickWall> WHITEWASHEDBRICKWALL =
             BUILDING_BLOCK_REGISTRY.register("whitewashedbrickwall",
                     () -> new WhitewashedBrickWall(Block.Properties.ofFullCopy(Blocks.BRICK_WALL)));
 

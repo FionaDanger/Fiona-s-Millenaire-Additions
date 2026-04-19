@@ -29,7 +29,29 @@ public class YurtBlockEntity extends BlockEntity {
         return faceData[dir.ordinal()] == BASE_STATE;
     }
 
-    // Apply a new color + pattern combination
+    // Set color ONLY - automatically defaults pattern to PLAIN
+    public void setFaceColor(Direction dir, YurtColor color) {
+        faceData[dir.ordinal()] = color.ordinal() * PATTERN_COUNT + YurtPattern.PLAIN.ordinal();
+        setChanged();
+        if (level != null) level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+    }
+
+    // Set pattern ONLY - keeps existing color
+    public void setFacePattern(Direction dir, YurtPattern pattern) {
+        int index = dir.ordinal();
+        if (faceData[index] == BASE_STATE) {
+            // If no color set yet, default to WHITE
+            faceData[index] = YurtColor.WHITE.ordinal() * PATTERN_COUNT + pattern.ordinal();
+        } else {
+            // Extract existing color and combine with new pattern
+            int currentColor = faceData[index] / PATTERN_COUNT;
+            faceData[index] = currentColor * PATTERN_COUNT + pattern.ordinal();
+        }
+        setChanged();
+        if (level != null) level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+    }
+
+    // Apply both color and pattern (existing method)
     public void setFaceData(Direction dir, YurtColor color, YurtPattern pattern) {
         faceData[dir.ordinal()] = color.ordinal() * PATTERN_COUNT + pattern.ordinal();
         setChanged();
@@ -50,6 +72,14 @@ public class YurtBlockEntity extends BlockEntity {
 
     public int getFacePatternOrdinal(Direction dir) {
         return faceData[dir.ordinal()] % PATTERN_COUNT;
+    }
+
+    public YurtColor getFaceColor(Direction dir) {
+        return YurtColor.values()[getFaceColorOrdinal(dir)];
+    }
+
+    public YurtPattern getFacePattern(Direction dir) {
+        return YurtPattern.values()[getFacePatternOrdinal(dir)];
     }
 
     @Override

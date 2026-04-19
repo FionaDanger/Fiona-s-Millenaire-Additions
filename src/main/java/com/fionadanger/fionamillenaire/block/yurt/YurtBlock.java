@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import com.fionadanger.fionamillenaire.item.InitItems;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -51,45 +52,48 @@ public class YurtBlock extends BaseEntityBlock {
 
         Direction face = hit.getDirection();
 
-        // 1. Reset face to base texture if holding shears (DO NOT consume shears)
         if (stack.is(Items.SHEARS)) {
             yurtBE.resetFace(face);
             return ItemInteractionResult.SUCCESS;
         }
 
-        // 2. Apply customization if holding valid items (CONSUME the item)
         YurtColor color = resolveColor(stack);
-        YurtPattern pattern = resolvePattern(stack);
-
-        if (color != null && pattern != null) {
-            yurtBE.setFaceData(face, color, pattern);
-
-            // Consume one item from the stack (unless in creative mode)
+        if (color != null) {
+            yurtBE.setFaceColor(face, color);
             if (!player.isCreative()) {
                 stack.shrink(1);
             }
-
             return ItemInteractionResult.SUCCESS;
         }
 
-        // 3. Not a valid item → let pipeline continue
+        YurtPattern pattern = resolvePattern(stack);
+        if (pattern != null) {
+            yurtBE.setFacePattern(face, pattern);
+            if (!player.isCreative()) {
+                stack.shrink(1);
+            }
+            return ItemInteractionResult.SUCCESS;
+        }
+
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
-    // TODO: Replace these with your actual registry checks
+    // Hook these into your actual item registry
     private YurtColor resolveColor(ItemStack stack) {
-        // Example using tags:
-        // if (stack.is(FMTags.Items.YURT_COLORS_WHITE)) return YurtColor.WHITE;
+        // Check for specific registered items
+        if (stack.is(InitItems.WHITEFELT.get())) return YurtColor.WHITE;
+        if (stack.is(InitItems.REDFELT.get())) return YurtColor.RED;
 
-        // Placeholder - replace with your actual logic
         return null;
     }
 
     private YurtPattern resolvePattern(ItemStack stack) {
-        // Example using tags:
-        // if (stack.is(FMTags.Items.YURT_PATTERNS_PLAIN)) return YurtPattern.PLAIN;
+        // Check for specific registered pattern items
+        if (stack.is(InitItems.WATERPATTERNFELT.get())) return YurtPattern.WATER;
+        if (stack.is(InitItems.RAMPATTERNFELT.get())) return YurtPattern.RAM;
+        if (stack.is(net.minecraft.world.item.Items.STRING)) return YurtPattern.ROPE;
+        if (stack.is(InitItems.AMULETPATTERNFELT.get())) return YurtPattern.AMULET;
 
-        // Placeholder - replace with your actual logic
         return null;
     }
 }

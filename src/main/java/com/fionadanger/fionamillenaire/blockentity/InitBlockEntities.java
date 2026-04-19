@@ -13,7 +13,7 @@ public class InitBlockEntities {
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, FMConstants.MODID);
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<YurtBlockEntity>> YURT_BE =
-            BLOCK_ENTITIES.register("yurt",
+            BLOCK_ENTITIES.register("yurtblock",
                     () -> BlockEntityType.Builder.of(
                             YurtBlockEntity::new,
                             InitBuildingBlocks.YURT.get() // You'll need to register this block

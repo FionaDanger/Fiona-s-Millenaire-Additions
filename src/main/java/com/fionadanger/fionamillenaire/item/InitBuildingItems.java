@@ -49,7 +49,7 @@ public class InitBuildingItems
     public static final DeferredItem<BlockItem> WHITEWASHEDBRICKSTAIRS_ITEM =
             BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("whitewashedbrickstairs", InitBuildingBlocks.WHITEWASHEDBRICKSTAIRS);
     public static final DeferredItem<BlockItem> WHITEWASHEDBRICKWALL_ITEM =
-            BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("whitewashedbrickwall", InitBuildingBlocks.WHITEWASHED_BRICK_WALL);
+            BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("whitewashedbrickwall", InitBuildingBlocks.WHITEWASHEDBRICKWALL);
 
     // Shingles
     public static final DeferredItem<BlockItem> SHINGLESBLOCK_ITEM =
@@ -76,4 +76,8 @@ public class InitBuildingItems
     // Hide Bedroll
     public static final DeferredItem<BlockItem> HIDE_BEDROLL_ITEM =
             BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("hide_bedroll", InitBuildingBlocks.HIDE_BEDROLL);
+
+
+    public static final DeferredItem<BlockItem> YURT_ITEM =
+            BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yurtblock", InitBuildingBlocks.YURT);
 }
